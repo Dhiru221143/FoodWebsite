@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid + Media Queries</title>
+</head>
+<style>
+    .container{
+        display: grid;
+       grid-gap: 1rem;
+       grid-template-areas:
+       'navbar navbar navbar navbar'
+       'section section section aside'
+       'footer footer footer footer';
+
+    }
+    @media only screen and (max-width:300px){
+        body{
+            background-color: red;
+        }
+        aside{
+        display:none;
+    }
+        span{
+        display:block;
+        text-align: center;
+    }
+    }
+    @media only screen and (min-width: 300px) and (max-width:500px)
+    {
+        body{
+            background-color: blue;
+        }
+        .container{
+       grid-template-areas:
+       'navbar navbar navbar navbar'
+       'section section section section'
+       'aside aside aside aside'
+       'footer footer footer footer';
+        }
+    aside{
+        display:none;
+    }
+    span{
+        display:block;
+        text-align: center;
+    }
+}
+    @media (min-width: 500px) and (max-width:800px){
+        body{
+            background-color: yellow;
+        }
+        .container{
+       grid-template-areas:
+       'navbar navbar navbar navbar'
+       'section section section section'
+       'aside aside aside aside'
+       'footer footer footer footer';
+    }
+    span{
+        display:block;
+        text-align: center;
+    }
+    }
+
+    @media (min-width: 800px) {
+        body{
+            background-color:green;
+        }
+    }
+    .bdr{
+        border: 2px solid black;
+        padding: 23px;
+        background-color: wheat;
+    }
+    nav{
+        grid-area: navbar;
+    }
+    section{
+        grid-area: section;
+    }
+    aside{
+        grid-area: aside;
+    }
+    footer{
+        grid-area: footer;
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <nav class="bdr">
+            <span>Home</span>
+            <span>About</span>
+            <span>Services</span>
+            <span>Contact</span>
+        </nav>
+        <section class="bdr">
+            <h2>Learn CSS in Hindi</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur arepellat Lorem, ipsum dolor sit amet consectetiis omnis sunt pariatur deserunt consectetur tempore a! Doloremque beatae ipsam quae, blanditiis sit voluptatum ea cumque corporis delectus obcaecati eum doloribus mollitia praesentium, fugiat asperiores ullam quisquam necessutem repellendus aliquid eius cumque eveniet quia optio hic natus ut dolorem ipsa quo nam nihil. Alias maxime ab quisquam at fugiat beatae, illo nihil possimus doloremque modi deserunt, id corporis ipsam. Necessitatibus quae molestias, animi dolorum quas earum harum eius velit aspernatur nostrum, nihil eveniet id porro explicabo consequatur? corporis velit praesentium veniam debitis cum ducimus ullam possimus quibusdam reprehenderit, molestiae aliquid quos quis ipsum consectetur esse, magnam eum omnis fuga Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus libero ad deserunt sunt eius, repellendus iure tempore delectus atque molestias labore expedita consectetur placeat! Sit aliquid sunt, ipsa id modi expedita eligendi deleniti. Sequi hic ipsum, quam quod qui molestias culpa quia possimus eligendi, dolor nam eius! Ratione qui repellat odit vero iusto, reiciendis fugit similique perspiciatis non. Ut quam ratione magni, quae temporibus ex eveniet eligendi fugiat quis corrupti. Doloremque dolorem ipsa officiis beatae quos perferendis quaerat, sint iure molestiae labore quae nemo eaque minima quibusdam rem cum consectetur incidunt accusantium recusandae fuga cumque. Eius beatae in nesciunt dolores fuga sunt, dicta suscipit tenetur molestiae dolorem quo error veniam culpa hic mollitia officia dignissimos quam illum repellendus, atque fugiat sequi neque. </p>
+        </section>
+        <aside class="bdr">
+            <h1>More About Us</h1>
+        </aside>
+    </div>
+    <footer class="bdr">Copyright DheerajKapri 2020</footer>
+</body>
+</html>
